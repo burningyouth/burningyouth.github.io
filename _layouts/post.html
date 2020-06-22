@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
+<div class="post-container">
+  <a class="post-link" href="{{ page.url | relative_url }}">
+    <h2 class="post-title">{{ page.title | escape }}</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date">
+      {{ page.date | date: "%-d" }}
+      {% assign month = page.date | date: '%-m' %}
+      {% case month %}
+      {% when '1' %}января
+      {% when '2' %}февраля
+      {% when '3' %}марта
+      {% when '4' %}апреля
+      {% when '5' %}мая
+      {% when '6' %}июня
+      {% when '7' %}июля
+      {% when '8' %}августа
+      {% when '9' %}сентября
+      {% when '10' %}октября
+      {% when '11' %}ноября
+      {% when '12' %}декабря
+      {% endcase %}
+      {{ page.date | date: "%Y" }}
+    </div>
+    {%- if page.categories.size > 0 -%}
+    <ul class="post-categories">
+      {%- for tag in page.categories -%}
+      <li>{{ tag }}</li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+  <div class="post">
+    {{ content }}
+  </div>
+  {%- if site.plainwhite.disqus_shortname -%}
+  <div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{ page.url | absolute_url }}';
+      this.page.identifier = '{{ page.url | absolute_url }}';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ site.plainwhite.disqus_shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript>
+  {%- endif -%}
+</div>

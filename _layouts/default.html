@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  {%- include head.html -%}
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      <a href="/"><img src="{{ "/assets/img/portfolio.jpeg" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
+      <h2 id="title">
+        <a href="/">{{ site.plainwhite.name }}</a>
+      </h2>
+      <p class="tagline">{{ site.plainwhite.tagline }}</p>
+      <ul class="social">
+        {%- if site.plainwhite.social_links.vkontakte -%}
+        <a href="https://vk.com/{{ site.plainwhite.social_links.vkontakte }}">
+          <li>
+            <i class="icon-vkontakte"></i>
+          </li>
+        </a>&nbsp;
+        {%- endif -%}
+        {%- if site.email -%}
+        <a href="mailto:{{ site.email }}">
+          <li>
+            <i class="icon-mail-alt"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.github -%}
+        <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a>
+        {%- endif -%}
+      </ul>
+      {%- if site.plainwhite.navigation -%}
+      <nav class="navigation">
+        <ul>
+          {% for link in site.plainwhite.navigation %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {%- endif -%}
+      {%- if site.plainwhite.dark_mode -%}
+      <div class='dark-mode-container'>
+        <p>Свет&nbsp;
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+      <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url}}"></script>
+      {%- endif -%}
+    </section>
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+  {%- if site.plainwhite.analytics_id -%}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.plainwhite.analytics_id }}');
+  </script>
+  {%- endif -%}
+
+  {% if site.plainwhite.search %}
+  <script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url}}"></script>
+  <script src="{{ "/assets/js/search.js" | relative_url}}"></script>
+  {% endif %}
+</body>
+
+</html>
