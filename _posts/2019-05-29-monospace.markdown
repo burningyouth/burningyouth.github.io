@@ -4,7 +4,7 @@ title:  "Тестовое задание для Monospace"
 date:   2019-05-29 12:00:00 +0400
 categories: Angular
 repo: https://burningyouth.github/monospace/
-env: https://burningyouth.io.github/monospace/
+env: https://burningyouth.github.io/monospace/
 permalink: /projects/:title
 ---
 

@@ -4,7 +4,7 @@ title:  "Приложение для проверки услуг (MedAsk)"
 date:   2019-10-25 12:00:00 +0400
 categories: React
 repo: https://burningyouth.github/med-ask-react/
-env: https://burningyouth.io.github/med-ask-react/
+env: https://burningyouth.github.io/med-ask-react/
 permalink: /projects/:title
 ---
 
