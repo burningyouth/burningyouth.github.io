@@ -1,13 +1,14 @@
 ---
-layout: post
+layout: project
 title:  "Верстка для Fullstack Development"
 date:   2020-01-13 12:00:00 +0400
-categories: HTML BEM
+categories: Верстка БЭМ
 repo: https://github.com/burningyouth/FSD-verstka/
 env: https://burningyouth.github.io/FSD-verstka/
+permalink: /projects/:title
 ---
 
-### Что за проект?
+### Что за проект
 Эта верстка была сделана в рамках стажировки в Fullstack Development, это один из ее этапов.
 
 ### Впервые я сделал такую объемную верстку

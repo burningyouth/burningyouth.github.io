@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Блог
+title: Никита Соколов
 email: mr.sokolov99@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Презентация моих проектов
@@ -34,7 +34,7 @@ plainwhite:
   dark_mode: true
   search: true
   navigation:
-    - title: Главная
+    - title: Мои работы
       url: "/"
     - title: Обо мне
       url: "/about"

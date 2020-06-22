@@ -39,19 +39,16 @@
 	}
 
 	a {
-		color: $dark_link_color;
-	}
-	#title a {
 		color: #fff;
-		&:hover {
-			color: $dark_link_color;
+		background: none;
+		[class^="icon-"] {
+			background: none;
 		}
-	}
-
-	.navigation ul a{
-		color: #fff;
 		&:hover {
 			color: $dark_link_color;
+			.post-title{
+				color: $dark_link_color;
+			}
 		}
 	}
 
