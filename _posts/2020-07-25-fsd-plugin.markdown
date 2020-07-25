@@ -3,6 +3,7 @@ layout: post
 title:  "Плагин слайдера диапазонов для JQuery"
 date:   2020-07-25 12:00:00 +0400
 categories: TypeScript MVP
+ongoing: true
 env: https://burningyouth.github.io/FSD-plugin/
 repo: https://github.com/burningyouth/FSD-plugin
 permalink: /projects/:title
