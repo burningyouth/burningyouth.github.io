@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Итоговая лабораторная по БД за 3 семестр"
+title:  "Итоговая лабораторная по БД за 3 курс"
 date:   2020-05-25 12:00:00 +0400
 categories: PHP MySQL
 repo: https://github.com/burningyouth/bd-lab/
